@@ -1,7 +1,5 @@
 package chapter2.semaphore;
 
-import chapter2.UserThread;
-
 /**
  * @author jianweilin
  * @date 2018/9/1

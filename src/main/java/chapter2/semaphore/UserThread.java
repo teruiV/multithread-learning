@@ -1,6 +1,4 @@
-package chapter2;
-
-import chapter2.semaphore.BoundedResource;
+package chapter2.semaphore;
 
 import java.util.Random;
 
