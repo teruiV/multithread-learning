@@ -1,4 +1,4 @@
-package chapter1;
+package chapter1.thread;
 
 import chapter1.domain.SynchronizedCounter;
 
@@ -17,7 +17,7 @@ public class CounterRunnable implements Runnable{
     public void run() {
         for (int i=0; i< 100; i++){
             synchronizedCounter.increase();
-            System.out.println(String.format("ThreadName: %s, value: %d",Thread.currentThread().getName(), synchronizedCounter.getValue()));
+            synchronizedCounter.getValue();
         }
     }
 }

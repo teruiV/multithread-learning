@@ -1,6 +1,9 @@
 package chapter1;
 
 import chapter1.domain.SynchronizedCounter;
+import chapter1.thread.CounterRunnable;
+import chapter1.thread.MyRunnable;
+import chapter1.thread.MyThread;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
@@ -32,10 +35,11 @@ public class App {
         SynchronizedCounter synchronizedCounter = new SynchronizedCounter();
         new Thread(new CounterRunnable(synchronizedCounter)).start();
         new Thread(new CounterRunnable(synchronizedCounter)).start();
+
     }
-    
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         syschronizedExample();
-//        threadMethod3();
+        threadMethod3();
+
     }
 }

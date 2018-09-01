@@ -16,6 +16,7 @@ public class SynchronizedCounter {
     }
 
     public synchronized int getValue(){
+        System.out.println(String.format("ThreadName: %s, value: %d",Thread.currentThread().getName(), c));
         return c;
     }
 }
