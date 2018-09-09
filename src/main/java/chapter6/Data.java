@@ -31,6 +31,7 @@ public class Data {
 
     public void write(char c){
         Lock writeLock = lock.writeLock();
+        // lock 放try外，如果lock发生异常，lock不会执行4finally内的内容也不会执行。
         writeLock.lock();
         try {
             doWrite(c);
